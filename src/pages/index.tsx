@@ -28,9 +28,9 @@ export default function Home(props: {posts: Post[]}) {
   const { posts } = props;
   return (
     <>
-      <div className={styles.container}>
-        <h1>Blog</h1>
-        <ul>
+      <div className="w-full flex flex-col justify-center items-center">
+        <h1 className="text-3xl font-bold underline">Blog</h1>
+        <ul className="text-center">
           {posts.map((post) =>{
             return <li className={styles.postitem} key={post.slug}>
                 <Link href="/post/[slug]" as={`/post/${post.slug}`}>
