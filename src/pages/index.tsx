@@ -19,7 +19,7 @@ export default function Home(props: { posts: Post[] }) {
     <>
       <section className="min-h-screen container flex flex-col lg:flex-row items-center justify-between gap-5 py-12">
         <div className="flex flex-col items-center lg:items-start justify-center w-full lg:w-1/2 text-center lg:text-start">
-          <h1 className="mb-4">Hi, I'm Wayne Jones</h1>
+          <h1 className="mb-4">Hi, I&#39;m Wayne Jones</h1>
           <p className="mb-4">I am a web developer and content creator based in New York City</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perspiciatis incidunt facilis laborum iste consequuntur inventore porro veritatis ipsa placeat? Quos sed aliquam eaque laudantium sapiente explicabo, modi asperiores aliquid! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perspiciatis incidunt facilis laborum iste consequuntur inventore porro veritatis ipsa placeat? Quos sed aliquam eaque laudantium sapiente explicabo, modi asperiores aliquid!</p>
         </div>
