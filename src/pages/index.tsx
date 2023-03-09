@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import { getAllPosts } from '../helper/util'
 import { Post } from '../helper/types'
+import Header from '@/components/header'
 
 export const getStaticProps = async () => {
   const posts = await getAllPosts()
@@ -17,6 +18,7 @@ export default function Home(props: { posts: Post[] }) {
   const { posts } = props;
   return (
     <>
+      <Header></Header>
       <section className="min-h-screen container flex flex-col lg:flex-row items-center justify-between gap-5 py-12">
         <div className="flex flex-col items-center lg:items-start justify-center w-full lg:w-1/2 text-center lg:text-start">
           <h1 className="mb-4">Hi, I&#39;m Wayne Jones</h1>
