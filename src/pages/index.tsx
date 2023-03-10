@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import { getAllPosts } from '../helper/util'
 import { Post } from '../helper/types'
 import Header from '@/components/header'
+import Hero from '@/components/hero'
 
 export const getStaticProps = async () => {
   const posts = await getAllPosts()
@@ -19,7 +20,8 @@ export default function Home(props: { posts: Post[] }) {
   return (
     <>
       <Header></Header>
-      <section className="min-h-screen container flex flex-col lg:flex-row items-center justify-between gap-5 py-12">
+      <Hero></Hero>
+      {/* <section className="min-h-screen container flex flex-col lg:flex-row items-center justify-between gap-5 py-12">
         <div className="flex flex-col items-center lg:items-start justify-center w-full lg:w-1/2 text-center lg:text-start">
           <h1 className="mb-4">Hi, I&#39;m Wayne Jones</h1>
           <p className="mb-4">I am a web developer and content creator based in New York City</p>
@@ -28,8 +30,8 @@ export default function Home(props: { posts: Post[] }) {
         <div className="flex w-full lg:w-1/2 justify-center lg:justify-end">
           <Image src="http://source.unsplash.com/random/500x700" alt="Random Picture" className="object-cover max-h-[300px] lg:max-h-[600px]" width="500" height="700"/>
         </div>
-      </section>
-      <section className="min-h-screen container flex flex-col">
+      </section> */}
+      {/* <section className="min-h-screen container flex flex-col">
         <h1 className="text-3xl font-bold underline">Blog</h1>
         <ul className="text-center">
           {posts.map((post) =>{
@@ -40,7 +42,7 @@ export default function Home(props: { posts: Post[] }) {
             </li>
           })}
         </ul>
-      </section>
+      </section> */}
     </>
   )
 }
