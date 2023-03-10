@@ -17,6 +17,14 @@ module.exports = {
         sans: ['var(--font-montserrat)', ...fontFamily.sans],
       }
     },
+    colors: {
+      'light-purple': '#A994FF',
+      'dark-purple': '#4C20FE',
+      'light-gray': '#2F2F30',
+      'dark-gray': '#161517',
+      'white': '#FFFFFF',
+      'black': '#000000',
+    },
   },
   plugins: [],
 }
