@@ -20,7 +20,7 @@ const Header = (props: Props) => {
     return (
         <header className="container absolute left-0 right-0">
             <nav
-                className="flex max-w-full items-center justify-between py-6"
+                className="flex max-w-full items-center justify-between py-11"
                 aria-label="Navigation">
                 <Link href="/" className="uppercase text-2xl font-bold">
                     Wayne Jones
