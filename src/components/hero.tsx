@@ -8,7 +8,7 @@ const Hero = () => {
             <div className="container flex flex-col md:flex-row items-center justify-between gap-5 py-24">
                 <div className="w-full md:w-1/2">
                     <h2 className="mb-6 text-4xl md:text-5xl !leading-tight font-bold tracking-tight lg:text-6xl xl:text-7xl">Experienced Web Developer & Photographer</h2>
-                    <Button text="Get In Touch" icon={HiOutlineArrowRight}></Button>
+                    <Button text="Get In Touch" icon={<HiOutlineArrowRight className="w-6 h-6" />}/>
                     <p className="mt-24 text-lg leading-8">
                         Based in New York City
                     </p>
