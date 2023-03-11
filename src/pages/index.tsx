@@ -1,6 +1,5 @@
 
 import Link from 'next/link'
-import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import { getAllPosts } from '../helper/util'
 import { Post } from '../helper/types'
@@ -31,7 +30,7 @@ export default function Home(props: { posts: Post[] }) {
           <Image src="http://source.unsplash.com/random/500x700" alt="Random Picture" className="object-cover max-h-[300px] lg:max-h-[600px]" width="500" height="700"/>
         </div>
       </section> */}
-      {/* <section className="min-h-screen container flex flex-col">
+      <section className="min-h-screen container flex flex-col">
         <h1 className="text-3xl font-bold underline">Blog</h1>
         <ul className="text-center">
           {posts.map((post) =>{
@@ -42,7 +41,7 @@ export default function Home(props: { posts: Post[] }) {
             </li>
           })}
         </ul>
-      </section> */}
+      </section>
     </>
   )
 }

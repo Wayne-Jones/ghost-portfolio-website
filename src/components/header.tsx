@@ -4,8 +4,6 @@ import { BiMenuAltRight } from "react-icons/bi";
 import { HiXMark } from "react-icons/hi2";
 import Link from "next/link";
 
-type Props = {};
-
 const navigation = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
@@ -14,7 +12,7 @@ const navigation = [
     { name: "Blog", href: "/blog" },
 ];
 
-const Header = (props: Props) => {
+const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
