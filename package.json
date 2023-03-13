@@ -23,7 +23,7 @@
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "@typescript-eslint/parser": "^5.54.0",
     "autoprefixer": "^10.4.13",
-    "eslint": "8.35.0",
+    "eslint": "8.36.0",
     "eslint-config-next": "13.2.3",
     "postcss": "^8.4.21",
     "react-icons": "^4.8.0",
