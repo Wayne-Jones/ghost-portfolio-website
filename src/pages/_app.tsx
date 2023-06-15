@@ -5,6 +5,7 @@ import type { AppProps } from 'next/app'
 const montserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font-montserrat',
+  display: 'swap'
 })
 
 export default function App({ Component, pageProps }: AppProps) {
