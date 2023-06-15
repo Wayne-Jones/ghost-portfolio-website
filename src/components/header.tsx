@@ -16,7 +16,7 @@ const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <header className="container absolute left-0 right-0">
+        <header className="container absolute left-0 right-0 z-[1]">
             <nav
                 className="flex max-w-full items-center justify-between py-11"
                 aria-label="Navigation">
@@ -32,7 +32,7 @@ const Header = () => {
                         <BiMenuAltRight className="h-8 w-8" aria-hidden="true" />
                     </button>
                 </div>
-                <div className="hidden lg:flex lg:gap-x-12">
+                <div className="hidden lg:flex gap-x-8 xl:gap-x-12">
                     {navigation.map((item) => (
                         <a
                             key={item.name}
