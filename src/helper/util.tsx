@@ -2,9 +2,9 @@ import { Post } from "./types";
 const { BLOG_URL, CONTENT_API_KEY } = process.env
 
 export async function getPost(slug: string): Promise<Post> {
-    let post: Post = {title: '', slug: ''};
+    let post: Post = {title: '', slug: '', html: '', feature_image: '', feature_image_alt: ''};
     if (BLOG_URL && CONTENT_API_KEY) {
-        const url = `${BLOG_URL}/ghost/api/v3/content/posts/slug/${slug}/?key=${CONTENT_API_KEY}&fields=title,html,slug`;
+        const url = `${BLOG_URL}/ghost/api/v3/content/posts/slug/${slug}/?key=${CONTENT_API_KEY}&fields=title,html,slug,feature_image,feature_image_alt`;
         const res: {posts: Post[]} | void = await fetch(url)
         .then<{ posts: Post[] }>((response: Response) => {
             if (response.ok) {
@@ -29,7 +29,7 @@ export async function getAllPosts(): Promise<Post[]> {
 
     let posts: Post[] = [];
     if (BLOG_URL && CONTENT_API_KEY) {
-        const url = `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug`
+        const url = `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug,html,feature_image,feature_image_alt`
         const res: { posts: Post[] } | void = await fetch(url)
             .then<{ posts: Post[] }>((response: Response) => {
                 if (response.ok) {
@@ -54,7 +54,7 @@ export async function getAllPostsByTag(tag: string): Promise<Post[]> {
 
     let posts: Post[] = [];
     if (BLOG_URL && CONTENT_API_KEY) {
-        const url = `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug&filter=tag:${tag}`
+        const url = `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,html,slug,feature_image,feature_image_alt&filter=tag:${tag}`
         const res: { posts: Post[] } | void = await fetch(url)
             .then<{ posts: Post[] }>((response: Response) => {
                 if (response.ok) {
