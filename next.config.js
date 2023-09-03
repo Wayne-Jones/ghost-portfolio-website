@@ -9,6 +9,12 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'p01--shaky-order--r2rc7gm4p8zj.code.run',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 }
