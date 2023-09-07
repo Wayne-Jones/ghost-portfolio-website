@@ -31,8 +31,8 @@ const Portfolio = (props: {posts: Post[]}) => {
                                     src={post.feature_image}
                                     alt={post.feature_image_alt}
                                     fill
-                                    objectFit='cover'
-                                    layout='fill'/>
+                                    style={{objectFit: "contain"}}
+                                    />
                                 </SplideSlide>
                             )
                         })}
