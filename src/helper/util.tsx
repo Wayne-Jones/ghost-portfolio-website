@@ -54,22 +54,17 @@ export async function getAllPostsByTag(tag: string): Promise<Post[]> {
 
     let posts: Post[] = [];
     if (BLOG_URL && CONTENT_API_KEY) {
-        const url = `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,html,slug,feature_image,feature_image_alt&filter=tag:${tag}`
-        const res: { posts: Post[] } | void = await fetch(url)
-            .then<{ posts: Post[] }>((response: Response) => {
-                if (response.ok) {
-                    return response.json()
-                }
-                else {
-                    const message = `An error occured: ${response.status}`
-                    throw new Error(message)
-                }
-
-            }).catch((error: Error) => {
-                throw new Error(error.message)
-            });
-        if (res) {
-            posts = res.posts
+        try {
+            const url = `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,html,slug,feature_image,feature_image_alt&filter=tag:${tag}`
+            const res: Response = await fetch(url);
+            if (!res.ok) {
+                throw new Error(JSON.stringify({ code: res.status, message: res.statusText }));
+            }
+            const data: {posts: Post[]} = await res.json() as {posts: Post[]};
+            posts = data.posts;
+            
+        } catch (error) {
+            console.error(error);
         }
     }
     return posts;
