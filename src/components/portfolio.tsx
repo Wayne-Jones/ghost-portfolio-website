@@ -27,12 +27,12 @@ const Portfolio = (props: {posts: Post[]}) => {
                         {posts.map((post)=>{
                             return (
                                 <SplideSlide key={post.slug}>
-                                    <Image
+                                    {post.feature_image && <Image
                                     src={post.feature_image}
                                     alt={post.feature_image_alt}
                                     fill
                                     style={{objectFit: "contain"}}
-                                    />
+                                    /> }
                                 </SplideSlide>
                             )
                         })}
