@@ -15,7 +15,7 @@ RUN apk update; \
     su-exec node ghost config storage.ghost-storage-cloudinary.upload.unique_filename false; \
     su-exec node ghost config storage.ghost-storage-cloudinary.upload.overwrite false; \
     su-exec node ghost config storage.ghost-storage-cloudinary.upload.folder my-blog; \
-    su-exec node ghost config storage.ghost-storage-cloudinary.upload.tags blog projects photography; \
+    su-exec node ghost config storage.ghost-storage-cloudinary.upload.tags ["blog", "projects", "photography"]; \
     su-exec node ghost config storage.ghost-storage-cloudinary.fetch.quality auto; \
     su-exec node ghost config storage.ghost-storage-cloudinary.fetch.cdn_subdomain true;
 VOLUME ["/var/lib/ghost/content"]
