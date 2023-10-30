@@ -10,8 +10,8 @@ const nextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'https',
-        hostname: 'p01--shaky-order--r2rc7gm4p8zj.code.run',
+        protocol: 'http',
+        hostname: '*.cloudinary.com',
         port: '',
         pathname: '/**',
       },
