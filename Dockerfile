@@ -1,5 +1,6 @@
 FROM ghost:5.61.2-alpine as cloudinary
 RUN apk add g++ make python3
+RUN apk add git
 RUN su-exec node yarn add git+https://github.com/tkisme/ghost-storage-cloudinary.git
 
 FROM ghost:5-alpine
