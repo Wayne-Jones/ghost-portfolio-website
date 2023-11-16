@@ -15,12 +15,29 @@ const Portfolio = (props: {posts: Post[]}) => {
                     hasTrack={ false }
                     aria-labelledby="portfolio"
                     options={{
-                        heightRatio: 0.5,
-                        width: 800,
-                        gap: "1em",
-                        padding: "1rem",
+                        width: "100%",
+                        height: "315px",
+                        gap: "5rem",
+                        padding: "30%",
                         drag: false,
-                        type: "loop"
+                        type: "loop",
+                        perPage: 1
+                    }}
+                    onMounted={(splide) => {
+                        const bar = splide.root.querySelector<HTMLElement>( '.splide__progress__bar' );
+                        const end  = splide.Components.Controller.getEnd() + 1;
+                        const rate = Math.min( ( splide.index + 1 ) / end, 1 );
+                        if(bar){
+                            bar.style.width = String( 100 * rate ) + '%';
+                        }
+                    }}
+                    onMove={(splide) => {
+                        const bar = splide.root.querySelector<HTMLElement>( '.splide__progress__bar' );
+                        const end  = splide.Components.Controller.getEnd() + 1;
+                        const rate = Math.min( ( splide.index + 1 ) / end, 1 );
+                        if(bar){
+                            bar.style.width = String( 100 * rate ) + '%';
+                        }
                     }}
                 >
                     <SplideTrack>
@@ -31,14 +48,14 @@ const Portfolio = (props: {posts: Post[]}) => {
                                     src={post.feature_image}
                                     alt={post.feature_image_alt}
                                     fill
-                                    style={{objectFit: "contain"}}
+                                    style={{objectFit: "cover"}}
                                     /> }
                                 </SplideSlide>
                             )
                         })}
                     </SplideTrack>
-                    <div className="splide__progress">
-                        <div className="splide__progress__bar" />
+                    <div className="splide__progress dark:bg-white bg-dark-gray mt-9">
+                        <div className="splide__progress__bar bg-dark-purple dark:bg-light-purple h-1 transition-all duration-300 ease-linear w-0" />
                     </div>
                     <div className="splide__arrows">
                         <button className="splide__arrow splide__arrow--prev">Prev</button>
