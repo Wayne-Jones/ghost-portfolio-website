@@ -18,7 +18,7 @@ const preview: Preview = {
       dark: { ...themes.dark },
       // Override the default light theme
       light: { ...themes.normal },
-      stylePreview: true
+      stylePreview: false
     }
   },
 
