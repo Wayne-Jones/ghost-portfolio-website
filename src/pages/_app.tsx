@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 import { Montserrat } from 'next/font/google'
 import type { AppProps } from 'next/app'
+import { ThemeProvider } from 'next-themes'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -16,7 +17,11 @@ export default function App({ Component, pageProps }: AppProps) {
           font-family: ${montserrat.style.fontFamily};
         }
       `}</style>
-      <Component {...pageProps} />
+      <main>
+        <ThemeProvider attribute="class">
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </main>
     </>
 
   )

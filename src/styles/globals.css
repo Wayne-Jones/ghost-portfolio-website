@@ -2,21 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --text-color: #161517;
-  --bg-color: #FFFFFF;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-@media (prefers-color-scheme: dark) {
+@layer base{
   :root {
+    --text-color: #161517;
+    --bg-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .dark {
     --text-color: #FFFFFF;
     --bg-color: #161517;
+  }  
+  body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
   }
-}
-body {
-  color: var(--text-color);
-  background-color: var(--bg-color);
 }
 
 .splide__slide.is-active {

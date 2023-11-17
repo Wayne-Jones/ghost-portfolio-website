@@ -8,7 +8,7 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   // Toggle dark-mode based on .dark class or data-mode="dark"
-  darkMode: ['class', '[data-mode="dark"]'],
+  darkMode: ['class'],
   theme: {
     container: {
       center: true,

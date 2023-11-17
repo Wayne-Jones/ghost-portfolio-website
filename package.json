@@ -10,8 +10,8 @@
     "storybook": "concurrently 'npm:watch:*'",
     "watch:storybook": "storybook dev -p 6006",
     "build-storybook": "npm run build:tailwind && storybook build",
-    "watch:tailwind": "npx tailwindcss -i ./src/styles/globals.css -o ./src/styles/tailwind.css --watch",
-    "build:tailwind": "npx tailwindcss -i ./src/styles/globals.css -o ./src/styles/tailwind.css"
+    "watch:tailwind": "npx tailwindcss -i ./src/styles/globals.css -o ./src/styles/tailwind.css --minify --watch",
+    "build:tailwind": "npx tailwindcss -i ./src/styles/globals.css -o ./src/styles/tailwind.css --minify"
   },
   "dependencies": {
     "@splidejs/react-splide": "^0.7.12",
@@ -19,6 +19,7 @@
     "@types/react": "18.2.37",
     "@types/react-dom": "18.2.15",
     "next": "14.0.2",
+    "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.2.2"

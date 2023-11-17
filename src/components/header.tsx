@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { BiMenuAltRight } from "react-icons/bi";
 import { HiXMark } from "react-icons/hi2";
@@ -14,6 +14,19 @@ const navigation = [
 
 const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const toggleTheme = () => {
+        document.documentElement.classList.toggle('dark');
+        localStorage.theme = localStorage.theme === 'dark' ? 'light' : 'dark';
+    }
+
+    useEffect(() => {
+        const themeSwitch = document.querySelector('.switch');
+        themeSwitch?.addEventListener('click', toggleTheme);
+
+        return () => {
+            themeSwitch?.removeEventListener('click', toggleTheme);
+        }
+    }, []);
 
     return (
         <header className="container absolute left-0 right-0 z-[1]">
