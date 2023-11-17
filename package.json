@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "concurrently 'npm:watch:*'",
+    "watch:storybook": "storybook dev -p 6006",
+    "build-storybook": "npm run build:tailwind && storybook build",
+    "watch:tailwind": "npx tailwindcss -i ./src/styles/globals.css -o ./src/styles/tailwind.css --watch",
+    "build:tailwind": "npx tailwindcss -i ./src/styles/globals.css -o ./src/styles/tailwind.css"
   },
   "dependencies": {
     "@splidejs/react-splide": "^0.7.12",
@@ -21,13 +26,25 @@
   "devDependencies": {
     "@headlessui/react": "^1.7.17",
     "@next/eslint-plugin-next": "^14.0.1",
+    "@storybook/addon-essentials": "^7.5.3",
+    "@storybook/addon-interactions": "^7.5.3",
+    "@storybook/addon-links": "^7.5.3",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/addon-themes": "^7.5.3",
+    "@storybook/blocks": "^7.5.3",
+    "@storybook/nextjs": "^7.5.3",
+    "@storybook/react": "^7.5.3",
+    "@storybook/testing-library": "^0.2.2",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "@typescript-eslint/parser": "^6.10.0",
     "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
     "eslint": "8.53.0",
     "eslint-config-next": "14.0.2",
+    "eslint-plugin-storybook": "^0.6.15",
     "postcss": "^8.4.31",
     "react-icons": "^4.11.0",
+    "storybook": "^7.5.3",
     "tailwindcss": "^3.3.5"
   }
 }
