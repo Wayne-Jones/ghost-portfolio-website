@@ -15,14 +15,15 @@ const navigation = [
 const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const toggleTheme = () => {
+        const currentTheme = document.documentElement.className;
         document.documentElement.classList.toggle('dark');
-        localStorage.theme = localStorage.theme === 'dark' ? 'light' : 'dark';
+        document.documentElement.classList.toggle('light');
+        localStorage.theme = currentTheme.includes('dark') ? 'light' : 'dark';
     }
 
     useEffect(() => {
-        const themeSwitch = document.querySelector('.switch');
+        const themeSwitch = document.querySelector('.theme-switch');
         themeSwitch?.addEventListener('click', toggleTheme);
-
         return () => {
             themeSwitch?.removeEventListener('click', toggleTheme);
         }
@@ -55,6 +56,10 @@ const Header = () => {
                         </a>
                     ))}
                 </div>
+                <button
+                    className='theme-switch bg-gray-800 dark:bg-gray-50 hover:bg-gray-600 dark:hover:bg-gray-300 transition-all duration-100 text-white dark:text-gray-800 px-8 py-2 text-2xl md:text-4xl rounded-lg bottom-32'>
+                    Toggle Mode
+                </button>
             </nav>
             <Dialog
                 as="div"
