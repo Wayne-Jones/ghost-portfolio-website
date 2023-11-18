@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import styles from '@/styles/Home.module.css'
 import { Post } from '../../helper/types'
 import { getPost, getAllPosts } from '../../helper/util'
+import Layout from '@/components/Layout'
 
 //Ghost CMS request
 export const getStaticProps = async (context: { params: { slug: string } }) => {
@@ -35,7 +36,7 @@ export default function PortfolioPost(props: { post: Post }) {
     }
 
     return (
-        <>
+        <Layout>
             <div className={styles.container}>
                 <p className={styles.goback}>
                     <Link href='/portfolio'>
@@ -45,6 +46,6 @@ export default function PortfolioPost(props: { post: Post }) {
                 <h1>{post.title}</h1>
                 {post.html && <div dangerouslySetInnerHTML={{ __html: post.html }}></div>}
             </div>
-        </>
+        </Layout>
     )
 }

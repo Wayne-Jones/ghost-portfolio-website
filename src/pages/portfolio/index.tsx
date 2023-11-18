@@ -3,6 +3,7 @@ import Link from 'next/link'
 import styles from '@/styles/Home.module.css'
 import { getAllPostsByTag } from '../../helper/util'
 import { Post } from '../../helper/types'
+import Layout from '@/components/Layout'
 
 export const getStaticProps = async () => {
     const posts = await getAllPostsByTag('portfolio');
@@ -15,7 +16,7 @@ export const getStaticProps = async () => {
 export default function PortfolioLanding(props: { posts: Post[] }) {
     const { posts } = props;
     return (
-        <>
+        <Layout>
             <div className="w-full flex flex-col justify-center items-center">
                 <h1 className="text-3xl font-bold underline">Portfolio</h1>
                 <ul className="text-center">
@@ -28,6 +29,6 @@ export default function PortfolioLanding(props: { posts: Post[] }) {
                     })}
                 </ul>
             </div>
-        </>
+        </Layout>
     )
 }
