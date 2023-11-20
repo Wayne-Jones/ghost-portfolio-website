@@ -4,7 +4,7 @@ import React from 'react';
 import Header from './Header';
 
 type Props = {
-    children?: JSX.Element[] | JSX.IntrinsicElements["div"]
+    children?: JSX.Element[]
 }
 
 const Layout = ({ children, ...customMeta }: Props) => {
@@ -45,7 +45,7 @@ const Layout = ({ children, ...customMeta }: Props) => {
                     <meta property="article:published_time" content={meta.date} />
                 )}
             </Head>
-            <main className="">
+            <main>
                 <Header />
                 {children}
             </main>

@@ -5,10 +5,10 @@ import { montserrat } from '@/helper/util'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-      <main className={`${montserrat.className}`}>
+      <div className={`${montserrat.className}`}>
         <ThemeProvider attribute="class">
           <Component {...pageProps} />
         </ThemeProvider>
-      </main>
+      </div>
   )
 }
