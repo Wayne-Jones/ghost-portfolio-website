@@ -3,6 +3,8 @@ import '../src/styles/tailwind.css';
 
 import { withThemeByClassName } from "@storybook/addon-themes";
 import { themes } from '@storybook/theming';
+import * as React from "react";
+import { montserrat } from '../src/helper/util';
 
 const preview: Preview = {
   parameters: {
@@ -22,14 +24,21 @@ const preview: Preview = {
     }
   },
 
-  decorators: [withThemeByClassName({
+  decorators: [
+    withThemeByClassName({
       themes: {
           // nameOfTheme: 'classNameForTheme',
           light: '',
           dark: 'dark',
       },
       defaultTheme: 'light',
-  })]
+    }),
+    (Story) => (
+      <div className={`${montserrat.className}`}>
+        <Story />
+      </div>
+    )
+  ]
 };
 
 export default preview;

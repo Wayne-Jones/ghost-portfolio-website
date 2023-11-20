@@ -1,5 +1,6 @@
+import { Montserrat } from "next/font/google";
 import { Post } from "./types";
-const { BLOG_URL, CONTENT_API_KEY } = process.env
+const { BLOG_URL, CONTENT_API_KEY } = process ? process.env: {BLOG_URL: "", CONTENT_API_KEY: ""}
 
 export async function getPost(slug: string): Promise<Post> {
     let post: Post = {title: '', slug: '', html: '', feature_image: '', feature_image_alt: ''};
@@ -69,3 +70,8 @@ export async function getAllPostsByTag(tag: string): Promise<Post[]> {
     }
     return posts;
 }
+
+export const montserrat = Montserrat({
+    subsets: ['latin'],
+    display: 'swap'
+})
