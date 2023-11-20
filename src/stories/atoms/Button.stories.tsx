@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import Button from "../../components/button";
+import Button from "@/components/button";
+import { HiOutlineArrowRight } from "react-icons/hi2";
 
 const meta = {
   title: "Atoms/Button",
@@ -15,8 +16,34 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+const Icon: JSX.Element = <HiOutlineArrowRight className="w-6 h-6"/>;
+
+export const Default: Story = {
   args: {
-    text: "Button",
+    text: "Button"
   },
 };
+
+export const WithIcon: Story = {
+  args: {
+    text: "Button",
+    icon: Icon
+  },
+};
+
+export const InvertedWithIcon: Story = {
+  args: {
+    text: "Button",
+    icon: Icon,
+    invert: true
+  },
+};
+
+export const IconOnly: Story = {
+  args: {
+    text: "",
+    icon: Icon
+  },
+};
+
+
