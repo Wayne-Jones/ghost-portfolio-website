@@ -10,7 +10,7 @@ export const getStaticProps = async (context: { params: { slug: string } }) => {
     const post: Post = await getPost(context.params.slug)
     return {
         props: { post },
-        revalidate: 10 // at most 1 request to the ghost CMS in the backend
+        revalidate: 60 // at most 1 request to the ghost CMS in the backend
     }
 }
 

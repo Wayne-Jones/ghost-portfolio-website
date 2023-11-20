@@ -9,7 +9,7 @@ export const getStaticProps = async () => {
     const posts = await getAllPostsByTag('portfolio');
     return {
         props: { posts },
-        revalidate: 10
+        revalidate: 60
     }
 }
 
