@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
-import Header from './Header';
+import Header from '@/components/Header';
 
 type Props = {
     children?: JSX.Element[]
