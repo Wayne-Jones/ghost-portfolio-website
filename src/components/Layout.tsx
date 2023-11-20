@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
-import Header from './Header'
+import Header from './Header';
 
 type Props = {
-    children?: JSX.Element[]
+    children?: JSX.Element[] | JSX.Element
 }
 
 const Layout = ({ children, ...customMeta }: Props) => {
