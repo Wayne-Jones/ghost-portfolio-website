@@ -3,6 +3,8 @@ import { Dialog } from "@headlessui/react";
 import { BiMenuAltRight } from "react-icons/bi";
 import { HiXMark } from "react-icons/hi2";
 import Link from "next/link";
+import Button from "./Button";
+import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 
 const navigation = [
     { name: "Home", href: "/" },
@@ -14,38 +16,29 @@ const navigation = [
 
 const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [darkMode, setDarkMode] = useState(false);
     const toggleTheme = () => {
         const currentTheme = document.documentElement.className;
         document.documentElement.classList.toggle('dark');
         document.documentElement.classList.toggle('light');
         localStorage.theme = currentTheme.includes('dark') ? 'light' : 'dark';
+        setDarkMode(!darkMode);
     }
 
     useEffect(() => {
-        const themeSwitch = document.querySelector('.theme-switch');
-        themeSwitch?.addEventListener('click', toggleTheme);
-        return () => {
-            themeSwitch?.removeEventListener('click', toggleTheme);
-        }
-    }, []);
+        const currentTheme = document.documentElement.className;
+        setDarkMode(currentTheme.includes('dark') ? true : false);
+    }, [])
+
 
     return (
-        <header className="container absolute left-0 right-0 z-[1]">
+        <header className="container">
             <nav
-                className="flex max-w-full items-center justify-between py-11"
+                className="flex w-full items-center justify-between py-6"
                 aria-label="Navigation">
                 <Link href="/" className="uppercase text-2xl font-bold">
                     Wayne Jones
                 </Link>
-                <div className="flex lg:hidden">
-                    <button
-                        type="button"
-                        className="-m-1.5 inline-flex items-center justify-center rounded-md p-1.5 "
-                        onClick={() => setMobileMenuOpen(true)}>
-                        <span className="sr-only">Open main menu</span>
-                        <BiMenuAltRight className="h-8 w-8" aria-hidden="true" />
-                    </button>
-                </div>
                 <div className="hidden lg:flex gap-x-8 xl:gap-x-12">
                     {navigation.map((item) => (
                         <a
@@ -56,10 +49,17 @@ const Header = () => {
                         </a>
                     ))}
                 </div>
-                <button
-                    className='theme-switch bg-gray-800 dark:bg-gray-50 hover:bg-gray-600 dark:hover:bg-gray-300 transition-all duration-100 text-white dark:text-gray-800 px-8 py-2 text-2xl md:text-4xl rounded-lg bottom-32'>
-                    Toggle Mode
-                </button>
+                {!darkMode && <Button text="" icon={<MdOutlineDarkMode className="w-6 h-6" />} onClick={toggleTheme} />}
+                {darkMode && <Button text="" icon={<MdOutlineLightMode className="w-6 h-6" />} onClick={toggleTheme} />}
+                <div className="flex lg:hidden">
+                    <button
+                        type="button"
+                        className="-m-1.5 inline-flex items-center justify-center rounded-md p-1.5 "
+                        onClick={() => setMobileMenuOpen(true)}>
+                        <span className="sr-only">Open main menu</span>
+                        <BiMenuAltRight className="h-8 w-8" aria-hidden="true" />
+                    </button>
+                </div>
             </nav>
             <Dialog
                 as="div"
