@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Button from "@/components/Button";
 import { HiOutlineArrowRight } from "react-icons/hi2";
-import { userEvent, within } from "@storybook/testing-library";
-import { expect } from '@storybook/jest';
 
 const meta = {
   title: "Atoms/Button",
