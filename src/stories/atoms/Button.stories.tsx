@@ -1,13 +1,15 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Button from "@/components/Button";
 import { HiOutlineArrowRight } from "react-icons/hi2";
+import { userEvent, within } from "@storybook/testing-library";
+import { expect } from '@storybook/jest';
 
 const meta = {
   title: "Atoms/Button",
   component: Button,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
-    layout: "centered",
+    layout: "centered"
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ["autodocs"],
@@ -19,9 +21,16 @@ type Story = StoryObj<typeof meta>;
 const Icon: JSX.Element = <HiOutlineArrowRight className="w-6 h-6" />;
 const toggleTheme = () => {
   const currentTheme = document.documentElement.className;
-  document.documentElement.classList.toggle('dark');
-  document.documentElement.classList.toggle('light');
-  localStorage.theme = currentTheme.includes('dark') ? 'light' : 'dark';
+  if (currentTheme.includes('dark')){
+      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
+      localStorage.theme = 'light';
+  }
+  else{
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+      localStorage.theme = 'dark';
+  }
 }
 
 export const Default: Story = {
