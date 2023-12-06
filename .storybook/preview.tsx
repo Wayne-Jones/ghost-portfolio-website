@@ -28,7 +28,7 @@ const preview: Preview = {
     withThemeByClassName({
       themes: {
           // nameOfTheme: 'classNameForTheme',
-          light: '',
+          light: 'light',
           dark: 'dark',
       },
       defaultTheme: 'light',
