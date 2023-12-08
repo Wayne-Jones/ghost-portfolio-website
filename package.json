@@ -36,7 +36,7 @@
     "@storybook/blocks": "^7.6.3",
     "@storybook/jest": "^0.2.3",
     "@storybook/nextjs": "^7.6.3",
-    "@storybook/react": "^7.6.3",
+    "@storybook/react": "^7.6.4",
     "@storybook/testing-library": "^0.2.2",
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "@typescript-eslint/parser": "^6.13.2",
