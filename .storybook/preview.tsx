@@ -5,6 +5,7 @@ import { withThemeByClassName } from "@storybook/addon-themes";
 import { themes } from '@storybook/theming';
 import * as React from "react";
 import { montserrat } from '../src/helper/util';
+import { ReactRenderer } from '@storybook/react';
 
 const preview: Preview = {
   parameters: {
@@ -25,7 +26,7 @@ const preview: Preview = {
   },
 
   decorators: [
-    withThemeByClassName({
+    withThemeByClassName<ReactRenderer>({
       themes: {
           // nameOfTheme: 'classNameForTheme',
           light: 'light',
