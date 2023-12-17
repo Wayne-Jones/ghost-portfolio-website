@@ -1,7 +1,7 @@
 import { getAllPostsByTag } from '../helper/util'
 import { Post } from '../helper/types'
 import Layout from '@/components/Layout'
-import Hero from '@/components/hero'
+import Hero from '@/components/Hero'
 import About from '@/components/about'
 import Portfolio from '@/components/portfolio'
 
