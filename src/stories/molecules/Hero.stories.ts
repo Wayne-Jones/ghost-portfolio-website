@@ -15,6 +15,23 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-  
+export const Center: Story = {
+  args: {
+    textAlign: "center",
+    inlineImage: "https://picsum.photos/1000"
+  },
+};
+
+export const LeftAlign: Story = {
+  args: {
+    textAlign: "left",
+    inlineImage: "https://picsum.photos/1000"
+  },
+};
+
+export const RightAlign: Story = {
+  args: {
+    textAlign: "right",
+    inlineImage: "https://picsum.photos/1000"
+  },
 };
