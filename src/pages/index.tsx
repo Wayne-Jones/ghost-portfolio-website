@@ -17,7 +17,7 @@ export default function Home(props: { posts: Post[] }) {
   const { posts } = props;
   return (
     <Layout>
-      <Hero />
+      <Hero textAlign='center' cta="http://google.com" />
       <About />
       <Portfolio posts={posts} />
     </Layout>
