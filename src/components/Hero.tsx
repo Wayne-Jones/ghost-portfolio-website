@@ -1,6 +1,5 @@
 import { HiOutlineArrowRight } from "react-icons/hi2";
 import Image from "next/image";
-import Aside from "./aside";
 import Button from "./Button";
 
 type Props = {
