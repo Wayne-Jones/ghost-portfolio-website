@@ -15,23 +15,28 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Center: Story = {
+export const Default: Story = {
+  args: {
+  },
+};
+
+export const HeroCTA: Story = {
   args: {
     textAlign: "center",
-    inlineImage: "https://picsum.photos/1000"
+    cta: "http://google.com"
   },
 };
 
-export const LeftAlign: Story = {
+export const HeroBG: Story = {
+  args: {
+    textAlign: "center",
+    bgImage: "https://picsum.photos/3000"
+  },
+};
+
+export const HeroPic: Story = {
   args: {
     textAlign: "left",
-    inlineImage: "https://picsum.photos/1000"
-  },
-};
-
-export const RightAlign: Story = {
-  args: {
-    textAlign: "right",
-    inlineImage: "https://picsum.photos/1000"
+    bgImage: "https://picsum.photos/1000"
   },
 };
