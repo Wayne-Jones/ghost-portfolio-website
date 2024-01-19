@@ -3,7 +3,7 @@ import Image from "next/image";
 import Button from "./Button";
 
 type Props = {
-    textAlign: "left" | "right" | "center",
+    textAlign?: "left" | "right" | "center",
     inlineImage?: string,
     inlineAlt?: string,
     bgImage?: string,
@@ -12,7 +12,7 @@ type Props = {
 }
 
 const Hero = (props: Props) => {
-    const align = props.textAlign;
+    const align = props.textAlign ?? 'center';
     const inlineImage = props.inlineImage;
     const inlineAlt = props.inlineAlt;
     const bgImage = props.bgImage;
