@@ -7,11 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "storybook": "concurrently 'npm:watch:*'",
-    "watch:storybook": "storybook dev -p 6006",
-    "build-storybook": "npm run build:tailwind && storybook build",
-    "watch:tailwind": "npx tailwindcss -i ./src/styles/globals.css -o ./src/styles/tailwind.css --minify --watch",
-    "build:tailwind": "npx tailwindcss -i ./src/styles/globals.css -o ./src/styles/tailwind.css --minify"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@splidejs/react-splide": "^0.7.12",
@@ -41,7 +38,6 @@
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
     "autoprefixer": "^10.4.17",
-    "concurrently": "^8.2.2",
     "eslint": "8.56.0",
     "eslint-config-next": "14.1.0",
     "eslint-plugin-storybook": "^0.6.15",
