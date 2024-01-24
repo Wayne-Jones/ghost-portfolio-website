@@ -22,6 +22,9 @@ const preview: Preview = {
       // Override the default light theme
       light: { ...themes.normal },
       stylePreview: false
+    },
+    docs: {
+      toc: true
     }
   },
 
