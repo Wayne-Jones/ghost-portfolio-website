@@ -22,21 +22,18 @@ export const Default: Story = {
 
 export const HeroCTA: Story = {
   args: {
-    textAlign: "center",
     cta: "http://google.com"
   },
 };
 
 export const HeroBG: Story = {
   args: {
-    textAlign: "center",
     bgImage: "https://picsum.photos/3000"
   },
 };
 
 export const HeroPic: Story = {
   args: {
-    textAlign: "left",
-    bgImage: "https://picsum.photos/1000"
+    inlineImage: "https://picsum.photos/1000"
   },
 };
