@@ -3,13 +3,30 @@ import Image from "next/image";
 import Button from "./Button";
 
 type Props = {
+    /**
+     * Text orientation and alignment in hero
+     */
     textAlign?: "left" | "right" | "center",
+    /**
+     * URL string for Inline Image for hero
+     */
     inlineImage?: string,
+    /**
+     * Alt Text for Inline Image for hero
+     */
     inlineAlt?: string,
+    /**
+     * URL string for Background Image for hero
+     */
     bgImage?: string,
+    /**
+     * URL string for Call To Action Button for hero
+     */
     cta?: string
 }
-
+/**
+ * Hero UI Component
+ */
 const Hero = ({textAlign = "center", inlineImage, inlineAlt, bgImage, cta}: Props) => {
     const align: Record<typeof textAlign, string> = {
         "left": "items-start",
