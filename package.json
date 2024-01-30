@@ -35,7 +35,7 @@
     "@storybook/nextjs": "^7.6.10",
     "@storybook/react": "^7.6.10",
     "@storybook/testing-library": "^0.2.2",
-    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
     "@typescript-eslint/parser": "^6.19.1",
     "autoprefixer": "^10.4.17",
     "eslint": "8.56.0",
