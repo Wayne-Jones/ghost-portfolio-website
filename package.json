@@ -22,7 +22,7 @@
     "typescript": "5.4.5"
   },
   "devDependencies": {
-    "@headlessui/react": "^1.7.18",
+    "@headlessui/react": "^1.7.19",
     "@next/eslint-plugin-next": "^14.2.3",
     "@storybook/addon-a11y": "^8.0.8",
     "@storybook/addon-essentials": "^8.0.8",
