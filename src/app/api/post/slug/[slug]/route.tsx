@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { Post } from "@/helper/types";
 const { BLOG_URL, CONTENT_API_KEY } = process.env;
 
-//Get Individual Post
+//Get Individual Post By Slug (Assuming post slugs are unique)
 export async function GET(request: Request, { params }: { params: { slug: string } }) {
   const slug = params.slug;
   if (BLOG_URL && CONTENT_API_KEY) {
