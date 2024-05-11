@@ -11,6 +11,9 @@ importers:
       '@splidejs/react-splide':
         specifier: ^0.7.12
         version: 0.7.12
+      '@splidejs/splide':
+        specifier: ^4.1.4
+        version: 4.1.4
       '@types/node':
         specifier: 20.12.11
         version: 20.12.11
