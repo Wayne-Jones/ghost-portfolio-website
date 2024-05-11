@@ -7,7 +7,7 @@ export async function GET() {
   if (BLOG_URL && CONTENT_API_KEY) {
     try {
       const url = `${BLOG_URL}/ghost/api/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug`;
-      const res = await fetch(url, { next: { revalidate: 10 } });
+      const res = await fetch(url, { next: { revalidate: 60 } });
       if (!res.ok) {
         throw new Error("Unable to retreive from network");
       }
