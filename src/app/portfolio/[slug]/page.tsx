@@ -1,27 +1,14 @@
-import { Post } from "@/helper/types";
+import { getAllPostsByTag, getPost } from "@/helper/util";
 import { Metadata } from "next";
 import Link from "next/link";
-const { LOCAL_URL } = process.env;
 
 export const metadata: Metadata = {
   title: "Home",
 };
 
-async function getData(slug: string) {
-  const res = await fetch(`${LOCAL_URL}/api/post/slug/${slug}`, {
-    next: { revalidate: 60 },
-  });
-  const post = await res.json() as Post;
-  return post;
-}
-
 export async function generateStaticParams() {
-  const res = await fetch(`${LOCAL_URL}/api/post/tag/portfolio`, {
-    next: { revalidate: 60 },
-  });
-  const posts = (await res.json()) as Post[];
-
-  return posts.map((post) => ({
+  const posts = await getAllPostsByTag("portfolio");
+  return posts?.map((post) => ({
     slug: post.slug,
   }));
 }
@@ -31,14 +18,18 @@ export default async function PortfolioSlug({
 }: {
   params: { slug: string };
 }) {
-  const post = await getData(params.slug);
+  const post = await getPost(params.slug);
   return (
     <>
       <p>
         <Link href="/portfolio">Go Back</Link>
       </p>
-      <h1>{post.title}</h1>
-      {post.html && <div dangerouslySetInnerHTML={{ __html: post.html }}></div>}
+      {post && (
+        <>
+          <h1>{post.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+        </>
+      )}
     </>
   );
 }
