@@ -7,17 +7,17 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'picsum.photos',
         port: '',
-        pathname: '/**',
+        pathname: '/**'
       },
       {
         protocol: 'http',
         hostname: '*.cloudinary.com',
         port: '',
-        pathname: '/**',
-      },
+        pathname: '/**'
+      }
     ],
-    minimumCacheTTL: 60,
-  },
-}
+    minimumCacheTTL: 60
+  }
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

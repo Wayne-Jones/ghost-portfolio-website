@@ -2,17 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
+@layer base {
   :root {
     --text-color: #161517;
-    --bg-color: #FFFFFF;
+    --bg-color: #ffffff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   .dark {
-    --text-color: #FFFFFF;
+    --text-color: #ffffff;
     --bg-color: #161517;
-  }  
+  }
   body {
     color: var(--text-color);
     background-color: var(--bg-color);

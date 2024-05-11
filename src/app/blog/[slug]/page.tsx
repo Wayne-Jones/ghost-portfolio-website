@@ -1,28 +1,24 @@
-import { getAllPostsByTag, getPost } from "@/helper/util";
-import { Metadata } from "next";
-import Link from "next/link";
+import { getAllPostsByTag, getPost } from '@/helper/util';
+import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: 'Blog'
 };
 
 export async function generateStaticParams() {
-  const posts = await getAllPostsByTag("blog");
+  const posts = await getAllPostsByTag('blog');
   return posts?.map((post) => ({
-    slug: post.slug,
+    slug: post.slug
   }));
 }
 
-export default async function BlogSlug({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function BlogSlug({ params }: { params: { slug: string } }) {
   const post = await getPost(params.slug);
   return (
     <>
       <p>
-        <Link href="/blog">Go Back</Link>
+        <Link href='/blog'>Go Back</Link>
       </p>
       {post && (
         <>
