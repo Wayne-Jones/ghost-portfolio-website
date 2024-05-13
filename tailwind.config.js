@@ -4,7 +4,7 @@ const { fontFamily } = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx}', './node_modules/preline/preline.js'],
+  content: ['./src/**/*.{js,ts,jsx,tsx}', 'node_modules/preline/dist/*.js'],
   // Toggle dark-mode based on .dark class or data-mode="dark"
   darkMode: ['class'],
   theme: {
