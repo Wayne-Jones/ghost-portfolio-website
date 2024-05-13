@@ -10,7 +10,6 @@ const config: StorybookConfig = {
     "@storybook/addon-themes",
     "@storybook/addon-a11y",
     "storybook-dark-mode",
-    "@storybook/addon-mdx-gfm",
     "@chromatic-com/storybook"
   ],
   framework: {
