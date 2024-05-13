@@ -6,10 +6,11 @@ import { themes } from '@storybook/theming';
 import * as React from "react";
 import { montserrat } from '../src/helper/util';
 import { ReactRenderer } from '@storybook/react';
+import { fn } from "@storybook/test";
 
 const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
+    args: { onClick: fn() },
     controls: {
       matchers: {
         color: /(background|color)$/i,

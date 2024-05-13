@@ -9,7 +9,9 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions",
     "@storybook/addon-themes",
     "@storybook/addon-a11y",
-    "storybook-dark-mode"
+    "storybook-dark-mode",
+    "@storybook/addon-mdx-gfm",
+    "@chromatic-com/storybook"
   ],
   framework: {
     name: "@storybook/nextjs",
