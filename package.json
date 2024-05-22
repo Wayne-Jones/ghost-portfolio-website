@@ -30,7 +30,7 @@
     "@storybook/addon-essentials": "^8.0.10",
     "@storybook/addon-interactions": "^8.0.10",
     "@storybook/addon-links": "^8.0.10",
-    "@storybook/addon-onboarding": "^8.0.10",
+    "@storybook/addon-onboarding": "^8.1.2",
     "@storybook/addon-themes": "^8.0.10",
     "@storybook/blocks": "^8.0.10",
     "@storybook/jest": "^0.2.3",
