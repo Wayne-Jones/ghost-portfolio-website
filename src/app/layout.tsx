@@ -19,9 +19,10 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body className={`${montserrat.className}`}>
-        
         <ThemeProvider>
-        <Header/>{children}</ThemeProvider>
+          <Header />
+          {children}
+        </ThemeProvider>
         <PrelineScript />
       </body>
     </html>

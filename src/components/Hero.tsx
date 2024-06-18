@@ -37,7 +37,7 @@ const Hero = ({ textAlign = 'center', inlineImage, inlineAlt, bgImage, cta }: Pr
 
   return (
     <section
-      className='min-h-screen dark:bg-light-gray py-10 flex justify-center items-center'
+      className='dark:bg-light-gray py-10 flex justify-center items-center'
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundRepeat: 'no-repeat',

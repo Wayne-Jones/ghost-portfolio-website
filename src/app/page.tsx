@@ -1,3 +1,5 @@
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -7,7 +9,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <h1>Home Page</h1>
+      <Hero textAlign='left'/>
       {/* <Hero textAlign='center' cta="http://google.com" />
       <About />
       <Portfolio posts={posts} /> */}
