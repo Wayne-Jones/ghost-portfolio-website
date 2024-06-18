@@ -27,7 +27,7 @@
     "@chromatic-com/storybook": "1",
     "@headlessui/react": "^2.0.3",
     "@next/eslint-plugin-next": "^14.2.4",
-    "@storybook/addon-a11y": "^8.0.10",
+    "@storybook/addon-a11y": "^8.1.10",
     "@storybook/addon-essentials": "^8.0.10",
     "@storybook/addon-interactions": "^8.0.10",
     "@storybook/addon-links": "^8.0.10",
