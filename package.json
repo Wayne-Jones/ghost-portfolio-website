@@ -13,7 +13,7 @@
   "dependencies": {
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",
-    "@types/node": "20.14.6",
+    "@types/node": "20.14.8",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "next": "14.2.4",
@@ -21,7 +21,7 @@
     "preline": "^2.3.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "typescript": "5.4.5"
+    "typescript": "5.5.2"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.5.0",
@@ -38,8 +38,8 @@
     "@storybook/react": "^8.1.10",
     "@storybook/test": "8.1.10",
     "@storybook/theming": "^8.1.10",
-    "@typescript-eslint/eslint-plugin": "^7.13.1",
-    "@typescript-eslint/parser": "^7.13.1",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.14.1",
     "autoprefixer": "^10.4.19",
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.4",
