@@ -2,7 +2,6 @@ import { ThemeProvider } from '@/provider/ThemeProvider';
 import { Metadata } from 'next';
 import { montserrat } from '@/helper/util';
 import '../styles/globals.css';
-import PrelineScript from '@/components/PrelineScript';
 import Header from '@/components/Header';
 
 export const metadata: Metadata = {
@@ -23,7 +22,6 @@ export default function RootLayout({
           <Header />
           {children}
         </ThemeProvider>
-        <PrelineScript />
       </body>
     </html>
   );
