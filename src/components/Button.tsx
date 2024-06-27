@@ -1,36 +1,30 @@
-import { MouseEventHandler } from 'react';
 import { Button as UIButton } from "@/components/ui/button";
+import React from "react";
 
-type Props = {
+interface ButtonProps
+extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
   icon?: JSX.Element;
   invert?: boolean;
-  onClick?: MouseEventHandler<HTMLButtonElement>;
-  variant?: "default" | "outline" | "ghost"
-};
+  variant?: "default" | "outline";
+}
 
-const Button = (props: Props) => {
+const Button = (props: ButtonProps) => {
   const Icon = props.icon;
-  const variant = props.variant ?? "default";
   const Invert = props.invert ?? false;
-  const clickFunction = props.onClick;
   const label = props.text;
   return (
     <>
       {!Invert && (
         <UIButton
-          className='bg-dark-purple dark:bg-light-purple text-white dark:text-dark-gray p-4 uppercase text-base rounded-md font-bold flex items-center gap-2'
-          onClick={clickFunction}
-          variant={variant}
+          {...props}
         >
           {label} {Icon}
         </UIButton>
       )}
       {Invert && (
         <UIButton
-          className='bg-dark-purple dark:bg-light-purple text-white dark:text-dark-gray p-4 uppercase text-base rounded-md font-bold flex items-center gap-2'
-          onClick={clickFunction}
-          variant={variant}
+          {...props}
         >
           {Icon} {label}
         </UIButton>
