@@ -37,18 +37,17 @@ export const Default: Story = {
   },
 };
 
-export const WithIcon: Story = {
+export const Outline: Story = {
   args: {
     text: "Button",
-    icon: Icon
+    variant: "outline"
   },
 };
 
-export const InvertedWithIcon: Story = {
+export const TextWithIcon: Story = {
   args: {
     text: "Button",
-    icon: Icon,
-    invert: true
+    icon: Icon
   },
 };
 
