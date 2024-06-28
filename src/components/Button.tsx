@@ -6,6 +6,7 @@ extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
   icon?: JSX.Element;
   invert?: boolean;
+  hideText?: boolean;
   variant?: "default" | "outline";
 }
 
@@ -13,20 +14,21 @@ const Button = (props: ButtonProps) => {
   const Icon = props.icon;
   const Invert = props.invert ?? false;
   const label = props.text;
+  const hideText = props.hideText ?? false;
   return (
     <>
       {!Invert && (
         <UIButton
           {...props}
         >
-          {label} {Icon}
+          {hideText ? (<span className="sr-only">{label}</span>) : label} {Icon}
         </UIButton>
       )}
       {Invert && (
         <UIButton
           {...props}
         >
-          {Icon} {label}
+          {Icon} {hideText ? (<span className="sr-only">{label}</span>) : label}
         </UIButton>
       )}
     </>

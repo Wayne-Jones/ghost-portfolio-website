@@ -53,16 +53,18 @@ export const TextWithIcon: Story = {
 
 export const IconOnly: Story = {
   args: {
-    text: "",
-    icon: Icon
+    text: "Icon Button",
+    icon: Icon,
+    hideText: true
   },
 };
 
 export const DarkModeToggle: Story = {
   args: {
-    text: "",
+    text: "Toggle Dark Mode",
     icon: Icon,
-    onClick: toggleTheme
+    onClick: toggleTheme,
+    hideText: true
   },
 };
 
