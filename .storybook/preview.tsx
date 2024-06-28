@@ -38,7 +38,7 @@ const preview: Preview = {
       defaultTheme: 'light',
     }),
     (Story) => (
-      <div className={`${montserrat.className}`}>
+      <div className={`antialiased ${montserrat.className}`}>
         <Story />
       </div>
     )
