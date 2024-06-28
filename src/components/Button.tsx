@@ -9,23 +9,19 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'default' | 'outline';
 }
 
-const Button = (props: ButtonProps) => {
-  const Icon = props.icon;
-  const Invert = props.invert ?? false;
-  const label = props.text;
-  const hideText = props.hideText ?? false;
+const Button = ({icon, invert = false, text, hideText = false, ...props}: ButtonProps) => {
   return (
     <>
-      {!Invert && (
+      {!invert && (
         <UIButton {...props}>
-          {hideText === true ? <span className='sr-only'>{label}</span> : label}
-          {Icon}
+          {hideText === true ? <span className='sr-only'>{text}</span> : text}
+          {icon}
         </UIButton>
       )}
-      {Invert && (
+      {invert && (
         <UIButton {...props}>
-          {Icon}
-          {hideText === true ? <span className='sr-only'>{label}</span> : label}
+          {icon}
+          {hideText === true ? <span className='sr-only'>{text}</span> : text}
         </UIButton>
       )}
     </>
