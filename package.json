@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.5.0",
-    "@headlessui/react": "^2.1.1",
+    "@headlessui/react": "^2.1.6",
     "@next/eslint-plugin-next": "^14.2.4",
     "@storybook/addon-a11y": "^8.1.11",
     "@storybook/addon-essentials": "^8.1.11",
