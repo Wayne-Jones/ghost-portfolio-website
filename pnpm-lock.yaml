@@ -61,8 +61,8 @@ importers:
         version: 5.5.2
     devDependencies:
       '@chromatic-com/storybook':
-        specifier: 1.5.0
-        version: 1.5.0(react@18.3.1)
+        specifier: 2.0.1
+        version: 2.0.1(react@18.3.1)
       '@headlessui/react':
         specifier: ^2.1.1
         version: 2.1.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -824,8 +824,8 @@ packages:
   '@base2/pretty-print-object@1.0.1':
     resolution: {integrity: sha512-4iri8i1AqYHJE2DstZYkyEprg6Pq6sKx3xn5FpySk9sNhH7qN2LLlHJCfDTZRILNwQNPD7mATWM0TBui7uC1pA==}
 
-  '@chromatic-com/storybook@1.5.0':
-    resolution: {integrity: sha512-LkLKv7SWu/6kGep1ft2HA1T/cm14wU0zoW71gE4cZRcgUoRQJtyhITFTLHrjqAxz6bVqNgqzQtd5oBZ2nK3L3g==}
+  '@chromatic-com/storybook@2.0.1':
+    resolution: {integrity: sha512-BWedsjGOMXsWIWqDmdV9VV1lx2GSauBISu0a2ZbwL2BPN4yrBypsOOuQ8hKvtEfFlYetGmTafi1N5W1oR1CW3A==}
     engines: {node: '>=16.0.0', yarn: '>=1.22.18'}
 
   '@colors/colors@1.5.0':
@@ -6536,7 +6536,7 @@ snapshots:
 
   '@base2/pretty-print-object@1.0.1': {}
 
-  '@chromatic-com/storybook@1.5.0(react@18.3.1)':
+  '@chromatic-com/storybook@2.0.1(react@18.3.1)':
     dependencies:
       chromatic: 11.5.4
       filesize: 10.1.2
