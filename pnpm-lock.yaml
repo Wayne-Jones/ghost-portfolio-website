@@ -67,8 +67,8 @@ importers:
         specifier: ^2.1.8
         version: 2.1.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@next/eslint-plugin-next':
-        specifier: ^14.2.12
-        version: 14.2.12
+        specifier: ^14.2.14
+        version: 14.2.14
       '@storybook/addon-a11y':
         specifier: ^8.3.1
         version: 8.3.1(storybook@8.3.1)
@@ -1146,6 +1146,9 @@ packages:
 
   '@next/eslint-plugin-next@14.2.12':
     resolution: {integrity: sha512-cPrKbXtK8NTThOOFNxRGGTw+5s02Ek8z8ri/hZqeKs6uP8LOTGqFyBy6hpCXt7TvLzzriWiiwRyD4h0XYmPEEg==}
+
+  '@next/eslint-plugin-next@14.2.14':
+    resolution: {integrity: sha512-kV+OsZ56xhj0rnTn6HegyTGkoa16Mxjrpk7pjWumyB2P8JVQb8S9qtkjy/ye0GnTr4JWtWG4x/2qN40lKZ3iVQ==}
 
   '@next/swc-darwin-arm64@14.2.12':
     resolution: {integrity: sha512-crHJ9UoinXeFbHYNok6VZqjKnd8rTd7K3Z2zpyzF1ch7vVNKmhjv/V7EHxep3ILoN8JB9AdRn/EtVVyG9AkCXw==}
@@ -6105,6 +6108,10 @@ snapshots:
   '@next/env@14.2.12': {}
 
   '@next/eslint-plugin-next@14.2.12':
+    dependencies:
+      glob: 10.3.10
+
+  '@next/eslint-plugin-next@14.2.14':
     dependencies:
       glob: 10.3.10
 
