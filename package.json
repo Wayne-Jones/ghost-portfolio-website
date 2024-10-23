@@ -16,7 +16,7 @@
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",
     "@types/node": "22.7.6",
-    "@types/react": "18.3.11",
+    "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
