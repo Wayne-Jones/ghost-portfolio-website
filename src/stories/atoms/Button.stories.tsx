@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Button from "@/components/Button";
 import { HiOutlineArrowRight } from "react-icons/hi2";
+import { JSX } from "react";
 
 const meta = {
   title: "Atoms/Button",

@@ -1,5 +1,5 @@
 import { Button as UIButton } from '@/components/ui/button';
-import React from 'react';
+import React, { JSX } from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
