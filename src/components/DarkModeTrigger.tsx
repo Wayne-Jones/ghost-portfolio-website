@@ -10,7 +10,11 @@ const DarkModeTrigger = () => {
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
   const toggleTheme = (event: React.MouseEvent, currentTheme: string | undefined) => {
-    currentTheme === 'dark' ? setTheme('light') : setTheme('dark');
+    if (currentTheme === 'dark') {
+      setTheme('light');
+    } else {
+      setTheme('dark');
+    }
   };
 
   useEffect(() => setMounted(true), []);
