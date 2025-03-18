@@ -48,10 +48,10 @@ const Hero = ({ textAlign = 'center', inlineImage, inlineAlt, bgImage, cta }: Pr
       <div className='container'>
         <div className='flex justify-center items-center gap-12'>
           <div className={`flex flex-col ${alignClass} justify-center`}>
-            <h1 className='mb-6 text-4xl md:text-5xl !leading-tight font-bold tracking-tight xl:text-6xl'>
+            <h1 className='mb-6 text-4xl md:text-5xl leading-tight! font-bold tracking-tight xl:text-6xl'>
               Wayne Jones
             </h1>
-            <h2 className='mb-6 text-xl md:text-2xl !leading-tight font-bold tracking-tight xl:text-3xl'>
+            <h2 className='mb-6 text-xl md:text-2xl leading-tight! font-bold tracking-tight xl:text-3xl'>
               Experienced Web Developer & Photographer
             </h2>
             <p className='text-lg leading-8'>Based in New York City</p>

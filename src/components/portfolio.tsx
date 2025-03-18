@@ -29,7 +29,7 @@ const Portfolio = (props: { posts: Post[] }) => {
             type: 'loop',
             speed: 500
           }}
-          className='mt-7 !absolute !left-0 !w-full'
+          className='mt-7 absolute! left-0! w-full!'
           onMounted={(splide) => {
             handleProgressBar(splide);
             adjustTrackHeight(splide);
@@ -47,7 +47,7 @@ const Portfolio = (props: { posts: Post[] }) => {
                 <SplideSlide key={post.slug}>
                   {post.feature_image && (
                     <Link
-                      className='focus:[&>img]:border-dark-purple dark:focus:[&>img]:border-white'
+                      className='[&>img]:focus:border-dark-purple dark:[&>img]:focus:border-white'
                       href={`/portfolio/${post.slug}`}
                     >
                       <Image
