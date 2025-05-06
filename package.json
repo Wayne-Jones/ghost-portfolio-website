@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.11",
-    "@radix-ui/react-slot": "^1.2.0",
+    "@radix-ui/react-slot": "^1.2.2",
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",
     "@types/node": "22.15.3",
