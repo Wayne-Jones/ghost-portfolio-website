@@ -1,26 +1,25 @@
-import type { StorybookConfig } from "@storybook/nextjs";
+import type { StorybookConfig } from "@storybook/nextjs-vite";
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+
   addons: [
     "@storybook/addon-links",
-    "@storybook/addon-essentials",
     "@storybook/addon-onboarding",
-    "@storybook/addon-interactions",
     "@storybook/addon-themes",
     "@storybook/addon-a11y",
     "storybook-dark-mode",
-    "@chromatic-com/storybook"
+    "@chromatic-com/storybook",
+    "@storybook/addon-docs"
   ],
+
   framework: {
-    name: "@storybook/nextjs",
+    name: "@storybook/nextjs-vite",
     options: {},
   },
+
   core: {
     disableTelemetry: true
-  },
-  docs: {
-    autodocs: "tag",
-  },
+  }
 };
 export default config;

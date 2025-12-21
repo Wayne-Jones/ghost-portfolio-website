@@ -1,12 +1,12 @@
-import type { Preview } from "@storybook/react";
+import type { Preview } from "@storybook/nextjs-vite";
 import '../src/styles/globals.css';
 
 import { withThemeByClassName } from "@storybook/addon-themes";
-import { themes } from '@storybook/theming';
+import { themes } from 'storybook/theming';
 import * as React from "react";
 import { montserrat } from '../src/helper/util';
-import { ReactRenderer } from '@storybook/react';
-import { fn } from "@storybook/test";
+import { ReactRenderer } from '@storybook/nextjs-vite';
+import { fn } from "storybook/test";
 
 const preview: Preview = {
   parameters: {

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import Button from "@/components/Button";
 import { HiOutlineArrowRight } from "react-icons/hi2";
 import { JSX } from "react";
