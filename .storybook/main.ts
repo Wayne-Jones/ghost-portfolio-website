@@ -8,7 +8,7 @@ const config: StorybookConfig = {
     "@storybook/addon-onboarding",
     "@storybook/addon-themes",
     "@storybook/addon-a11y",
-    "storybook-dark-mode",
+    "@vueless/storybook-dark-mode",
     "@chromatic-com/storybook",
     "@storybook/addon-docs"
   ],
