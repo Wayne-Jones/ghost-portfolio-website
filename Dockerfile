@@ -1,9 +1,9 @@
-FROM ghost:5-alpine as cloudinary
+FROM ghost:6-alpine AS cloudinary
 RUN apk add g++ make python3
 RUN apk add git
 RUN su-exec node yarn add git+https://github.com/tkisme/ghost-storage-cloudinary.git
 
-FROM ghost:5-alpine
+FROM ghost:6-alpine
 COPY --chown=node:node --from=cloudinary $GHOST_INSTALL/node_modules $GHOST_INSTALL/node_modules
 COPY --chown=node:node --from=cloudinary $GHOST_INSTALL/node_modules/ghost-storage-cloudinary $GHOST_INSTALL/content/adapters/storage/ghost-storage-cloudinary
 # Here, we use the Ghost CLI to set some pre-defined values.
