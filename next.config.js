@@ -17,7 +17,8 @@ const nextConfig = {
       }
     ],
     minimumCacheTTL: 60
-  }
+  },
+  cacheComponents: true,
 };
 
 module.exports = nextConfig;
