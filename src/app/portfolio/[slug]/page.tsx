@@ -29,5 +29,3 @@ export default async function PortfolioSlug({ params }: { params: { slug: string
     </>
   );
 }
-
-export const dynamicParams = false;
