@@ -23,7 +23,7 @@ export default async function BlogSlug({ params }: { params: { slug: string } })
       {post && (
         <>
           <h1>{post.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+          <div dangerouslySetInnerHTML={{ __html: post.html ?? '' }}></div>
         </>
       )}
     </>
