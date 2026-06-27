@@ -44,3 +44,5 @@ copilot/
 
 data/
 .pnpm-store/
+
+.opencode
