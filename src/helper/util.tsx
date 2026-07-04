@@ -21,10 +21,14 @@ export async function getPostsByTag(tag: string) {
 
 export async function getPost(slug: string) {
   'use cache';
-  return await api.posts.read(
-    { slug: slug },
-    { include: ['tags', 'authors'], formats: ['html', 'plaintext'] }
-  );
+  try {
+    return await api.posts.read(
+      { slug: slug },
+      { include: ['tags', 'authors'], formats: ['html', 'plaintext'] }
+    );
+  } catch {
+    return null;
+  }
 }
 
 export async function getAllPosts() {

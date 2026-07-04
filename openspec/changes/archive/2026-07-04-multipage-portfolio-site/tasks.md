@@ -14,4 +14,4 @@
 
 - [x] 3.1 Run the development server and verify `/about` and `/photography` routes render correctly.
 - [x] 3.2 Update `README.md` to list the new pages and any required environment variables.
-- [ ] 3.3 Commit the changes following the project's contribution guidelines.
+- [x] 3.3 Commit the changes following the project's contribution guidelines.

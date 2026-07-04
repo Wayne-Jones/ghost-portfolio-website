@@ -6,11 +6,6 @@ export const metadata: Metadata = {
   title: 'Photography'
 };
 
-export async function generateStaticParams() {
-  const posts = await getAllPostsByTag('photography');
-  return posts.map((p) => ({ slug: p.slug }));
-}
-
 export default async function PhotographyPage() {
   // Fetch posts tagged with "photography" from Ghost CMS.
   // If none are returned, the page will fall back to local images.

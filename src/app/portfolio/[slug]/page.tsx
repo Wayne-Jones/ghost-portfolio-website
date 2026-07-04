@@ -8,9 +8,8 @@ export const metadata: Metadata = {
 
 export async function generateStaticParams() {
   const posts = await getAllPostsByTag('portfolio');
-  return posts?.map((post) => ({
-    slug: post.slug
-  }));
+  const slugs = (posts ?? []).map((post) => post.slug);
+  return slugs.length > 0 ? slugs.map((slug) => ({ slug })) : [{ slug: 'placeholder' }];
 }
 
 export default async function PortfolioSlug({ params }: { params: { slug: string } }) {
