@@ -1,11 +1,11 @@
 ## 1. Cleanup
 
-- [ ] 1.1 Delete `src/components/Layout.tsx` (uses Pages Router APIs incompatible with App Router)
-- [ ] 1.2 Delete `src/components/aside.tsx` (only used by the deleted `about.tsx` and never wired to a page)
-- [ ] 1.3 Delete `src/components/about.tsx` (unused — homepage references commented out)
-- [ ] 1.4 Delete `tailwind.config.ts` (Tailwind v4 reads tokens from `@theme` in `globals.css`)
-- [ ] 1.5 Verify no broken imports across the project after deletions
-- [ ] 1.6 Run `pnpm lint` and confirm it exits 0
+- [x] 1.1 Delete `src/components/Layout.tsx` (uses Pages Router APIs incompatible with App Router)
+- [x] 1.2 Delete `src/components/aside.tsx` (only used by the deleted `about.tsx` and never wired to a page)
+- [x] 1.3 Delete `src/components/about.tsx` (unused — homepage references commented out)
+- [x] 1.4 Delete `tailwind.config.ts` (Tailwind v4 reads tokens from `@theme` in `globals.css`)
+- [x] 1.5 Verify no broken imports across the project after deletions
+- [x] 1.6 Run `pnpm lint` and confirm it exits 0
 - [ ] 1.7 Commit "Cleanup: remove dead code ahead of homepage redesign"
 
 ## 2. Theme tokens and registered utilities
