@@ -6,18 +6,18 @@
 - [x] 1.4 Delete `tailwind.config.ts` (Tailwind v4 reads tokens from `@theme` in `globals.css`)
 - [x] 1.5 Verify no broken imports across the project after deletions
 - [x] 1.6 Run `pnpm lint` and confirm it exits 0
-- [ ] 1.7 Commit "Cleanup: remove dead code ahead of homepage redesign"
+- [x] 1.7 Commit "Cleanup: remove dead code ahead of homepage redesign"
 
 ## 2. Theme tokens and registered utilities
 
-- [ ] 2.1 Extend `src/styles/globals.css` `@theme` with the adjusted palette: light `#ffffff` / `#0a0a0b` / `#404046` / `#2b1bb5`, dark `#050507` / `#f2f2f5` / `#c2c2c8` / `#b9a3ff`; alias as `--color-fg`, `--color-bg`, `--color-muted-fg`, `--color-border-subtle`, `--color-accent`, `--color-accent-foreground`
-- [ ] 2.2 Confirm `@custom-variant dark (&:is(.dark *))` is present (already in file)
-- [ ] 2.3 Register `@utility text-ghost` with `-webkit-text-stroke: 2px currentColor; color: transparent;`
-- [ ] 2.4 Register `@utility ease-studio` with `transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);`
-- [ ] 2.5 Register `@utility focus-ring` with `outline: 2px solid var(--color-accent); outline-offset: 2px;`
-- [ ] 2.6 Add `@media (prefers-reduced-motion: reduce)` rule disabling `::view-transition-*` animations
-- [ ] 2.7 Verify both themes render existing routes without regressions; sample AAA contrast on body, muted, and accent text
-- [ ] 2.8 Run `pnpm lint` and confirm it exits 0
+- [x] 2.1 Extend `src/styles/globals.css` `@theme` with the adjusted palette: light `#ffffff` / `#0a0a0b` / `#404046` / `#2b1bb5`, dark `#050507` / `#f2f2f5` / `#c2c2c8` / `#b9a3ff`; alias as `--color-fg`, `--color-bg`, `--color-muted-fg`, `--color-border-subtle`, `--color-accent`, `--color-accent-foreground`
+- [x] 2.2 Confirm `@custom-variant dark (&:is(.dark *))` is present (already in file)
+- [x] 2.3 Register `@utility text-ghost` with `-webkit-text-stroke: 2px currentColor; color: transparent;`
+- [x] 2.4 Register `@utility ease-studio` with `transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);`
+- [x] 2.5 Register `@utility focus-ring` with `outline: 2px solid var(--color-accent); outline-offset: 2px;`
+- [x] 2.6 Add `@media (prefers-reduced-motion: reduce)` rule disabling `::view-transition-*` animations
+- [x] 2.7 Verify both themes render existing routes without regressions; sample AAA contrast on body, muted, and accent text
+- [x] 2.8 Run `pnpm lint` and confirm it exits 0
 - [ ] 2.9 Commit "Theme tokens adjusted for WCAG AAA; register text-ghost, ease-studio, focus-ring utilities"
 
 ## 3. Shadcn on Base UI and Button variants
