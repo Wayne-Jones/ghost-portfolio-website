@@ -42,7 +42,7 @@
 - [x] 4.6 Create `src/components/layout/SkipLink.tsx` — first focusable element, visually hidden until focused, links to `#main`
 - [x] 4.7 Co-locate `.stories.tsx` for each primitive and layout component with Default, Dark, Focused, and ReducedMotion stories where applicable
 
-- [x] 4.9 Commit "Layout primitives: Container, Section, SectionDivider, SkipLink, VisuallyHidden, FocusRing + stories"
+- [x] 4.8 Commit "Layout primitives: Container, Section, SectionDivider, SkipLink, VisuallyHidden, FocusRing + stories"
 
 ## 5. Typography primitives
 
@@ -52,7 +52,7 @@
 - [ ] 5.4 Create `src/components/typography/Anchor.tsx` — muted anchor copy (`text-base text-muted-fg`)
 - [ ] 5.5 Co-locate `.stories.tsx` for each typography component with Default and Dark stories
 
-- [ ] 5.7 Commit "Typography primitives: DisplaySolid, DisplayGhost, Intro, Anchor + stories"
+- [ ] 5.6 Commit "Typography primitives: DisplaySolid, DisplayGhost, Intro, Anchor + stories"
 
 ## 6. ThemeToggle and SiteHeader
 
@@ -63,7 +63,7 @@
 - [ ] 6.5 Delete `src/components/Header.tsx` and `src/components/DarkModeTrigger.tsx` after confirming `SiteHeader` and `ThemeToggle` cover their responsibilities
 - [ ] 6.6 Co-locate `.stories.tsx` for `ThemeToggle` and `SiteHeader` (Default, Focused, Dark, Mobile viewport)
 
-- [ ] 6.8 Commit "SiteHeader v2 + ThemeToggle + SkipLink; remove old Header and DarkModeTrigger"
+- [ ] 6.7 Commit "SiteHeader v2 + ThemeToggle + SkipLink; remove old Header and DarkModeTrigger"
 
 ## 7. Placeholder assets
 
@@ -85,7 +85,7 @@
 - [ ] 8.7 Verify AAA contrast on all hero text and CTAs in both themes; verify keyboard focus on CTAs shows `focus-ring`
 - [ ] 8.8 Co-locate `.stories.tsx` for each hero sub-component and `Hero.tsx` itself (Default, Dark, Focused, ReducedMotion)
 
-- [ ] 8.10 Commit "Hero composition: Intro, Display (solid+ghost), PhotoFrame, CtaRow, Anchor + stories"
+- [ ] 8.9 Commit "Hero composition: Intro, Display (solid+ghost), PhotoFrame, CtaRow, Anchor + stories"
 
 ## 9. SiteFooter
 
@@ -93,7 +93,7 @@
 - [ ] 9.2 Verify all footer links meet AAA contrast in both themes
 - [ ] 9.3 Co-locate `.stories.tsx` with Default and Dark stories
 
-- [ ] 9.5 Commit "SiteFooter with copyright, mailto, socials + story"
+- [ ] 9.4 Commit "SiteFooter with copyright, mailto, socials + story"
 
 ## 10. Home section components
 
@@ -108,7 +108,7 @@
 - [ ] 10.9 Create `src/components/sections/AboutTeaser.tsx` — `<Section>` with short inline bio and `<AboutTeaserLink>`
 - [ ] 10.10 Co-locate `.stories.tsx` for every section component using mock `PostSummary[]` data
 
-- [ ] 10.12 Commit "Home sections: SelectedWork, WorkTile, PhotoMosaic, PhotoMosaicTile, LatestWriting, WritingItem, AboutTeaser, AboutTeaserLink, SectionHeading + stories"
+- [ ] 10.11 Commit "Home sections: SelectedWork, WorkTile, PhotoMosaic, PhotoMosaicTile, LatestWriting, WritingItem, AboutTeaser, AboutTeaserLink, SectionHeading + stories"
 
 ## 11. Ghost CMS data helpers
 
@@ -162,12 +162,12 @@
 
 - [ ] 16.1 Run `pnpm lint` and confirm it exits 0 with no warnings
 
-- [ ] 16.3 Manual keyboard-only flow through every page (no mouse); verify focus order and visible focus rings
-- [ ] 16.4 Manual screen reader pass (VoiceOver or NVDA) on home, portfolio index, and portfolio case study
-- [ ] 16.5 Toggle OS dark mode and verify AAA contrast on every page
-- [ ] 16.6 Toggle OS reduced-motion and verify all animations (including view transitions) are disabled
-- [ ] 16.7 Sample AAA contrast ratios with a tool (Lighthouse a11y, or browser devtools) on body, muted, and accent text in both themes
-- [ ] 16.8 Update `README.md` with: adjusted palette hex values, component tree overview, Storybook story policy, WCAG 2.2 AAA accessibility statement, View Transitions caveats and fallback, placeholder asset policy and Ghost CMS swap path, lint and build commands
+- [ ] 16.2 Manual keyboard-only flow through every page (no mouse); verify focus order and visible focus rings
+- [ ] 16.3 Manual screen reader pass (VoiceOver or NVDA) on home, portfolio index, and portfolio case study
+- [ ] 16.4 Toggle OS dark mode and verify AAA contrast on every page
+- [ ] 16.5 Toggle OS reduced-motion and verify all animations (including view transitions) are disabled
+- [ ] 16.6 Sample AAA contrast ratios with a tool (Lighthouse a11y, or browser devtools) on body, muted, and accent text in both themes
+- [ ] 16.7 Update `README.md` with: adjusted palette hex values, component tree overview, documentation policy, WCAG 2.2 AAA accessibility statement, View Transitions caveats and fallback, placeholder asset policy and Ghost CMS swap path, lint and build commands
 - [ ] 16.9 Commit "Verification and documentation for homepage redesign"
 
 (End of tasks)
