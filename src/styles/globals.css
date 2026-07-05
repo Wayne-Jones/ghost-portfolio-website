@@ -10,12 +10,21 @@
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
 
-  --color-light-purple: #a994ff;
-  --color-dark-purple: #4c20fe;
-  --color-light-gray: #2f2f30;
-  --color-dark-gray: #161517;
   --color-white: #ffffff;
   --color-black: #000000;
+
+  --color-light-gray: #2f2f30;
+  --color-dark-gray: #161517;
+
+  --color-light-purple: #a994ff;
+  --color-dark-purple: #4c20fe;
+
+  --color-bg: var(--color-white);
+  --color-fg: #0a0a0b;
+  --color-muted-fg: #404046;
+  --color-border-subtle: color-mix(in oklab, currentColor 8%, transparent);
+  --color-accent: #2b1bb5;
+  --color-accent-foreground: var(--color-white);
 
   @keyframes accordion-down {
     from {
@@ -35,6 +44,20 @@
   }
 }
 
+.dark {
+  --color-bg: #050507;
+  --color-fg: #f2f2f5;
+  --color-muted-fg: #c2c2c8;
+  --color-border-subtle: color-mix(in oklab, currentColor 8%, transparent);
+  --color-accent: #b9a3ff;
+  --color-accent-foreground: #050507;
+}
+
+@theme inline {
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-fg);
+}
+
 @utility container {
   margin-inline: auto;
   padding-inline: 2rem;
@@ -43,6 +66,28 @@
   }
   @media (width >= 1400px) {
     max-width: 1400px;
+  }
+}
+
+@utility text-ghost {
+  -webkit-text-stroke: 2px currentColor;
+  color: transparent;
+}
+
+@utility ease-studio {
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@utility focus-ring {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group,
+  ::view-transition-old,
+  ::view-transition-new {
+    animation: none !important;
   }
 }
 
@@ -65,18 +110,10 @@
 }
 
 @layer base {
-  :root {
-    --text-color: #161517;
-    --bg-color: #ffffff;
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-  .dark {
-    --text-color: #ffffff;
-    --bg-color: #161517;
-  }
-  body {
-    color: var(--text-color);
-    background-color: var(--bg-color);
   }
 }
