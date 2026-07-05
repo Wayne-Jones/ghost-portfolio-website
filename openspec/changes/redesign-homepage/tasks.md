@@ -22,14 +22,14 @@
 
 ## 3. Shadcn on Base UI and Button variants
 
-- [ ] 3.1 Update `components.json` to point shadcn at Base UI primitives and drop the `tailwind.config.ts` reference
-- [ ] 3.2 Install shadcn components on Base UI: `separator`, `navigation-menu`, `aspect-ratio`, `badge`, `skeleton`, `hover-card`, `tooltip`, `sonner`
-- [ ] 3.3 Verify `tailwindcss-animate` compatibility with Tailwind v4; keep if compatible, drop and register keyframes via `@utility` if not
-- [ ] 3.4 Add the `imageGhost` variant to `buttonVariants` in `src/components/ui/button.tsx`: transparent idle, `border-current/50`, accent fill on hover, `px-5 py-2.5`, `rounded-md`, `transition-colors duration-300 ease-studio`
-- [ ] 3.5 Verify all variant strings are pure Tailwind utility classes via `cva`
-- [ ] 3.6 Add `@tailwindcss/typography` dependency for Ghost HTML body rendering on case study pages
-- [ ] 3.7 Verify existing `sheet` still renders correctly after the Base UI switch
-- [ ] 3.8 Run `pnpm lint` and confirm it exits 0
+- [x] 3.1 Update `components.json` to point shadcn at Base UI primitives and drop the `tailwind.config.ts` reference
+- [x] 3.2 Install shadcn components on Base UI: `separator`, `navigation-menu`, `aspect-ratio`, `badge`, `skeleton`, `hover-card`, `tooltip`, `sonner`
+- [x] 3.3 Verify `tailwindcss-animate` compatibility with Tailwind v4; keep if compatible, drop and register keyframes via `@utility` if not
+- [x] 3.4 Add the `imageGhost` variant to `buttonVariants` in `src/components/ui/button.tsx`: transparent idle, `border-current/50`, accent fill on hover, `px-5 py-2.5`, `rounded-md`, `transition-colors duration-300 ease-studio`
+- [x] 3.5 Verify all variant strings are pure Tailwind utility classes via `cva`
+- [x] 3.6 Add `@tailwindcss/typography` dependency for Ghost HTML body rendering on case study pages
+- [x] 3.7 Verify existing `sheet` still renders correctly after the Base UI switch
+- [x] 3.8 Run `pnpm lint` and confirm it exits 0
 - [ ] 3.9 Commit "Shadcn on Base UI; add imageGhost Button variant; install needed shadcn components"
 
 ## 4. Layout and structural primitives

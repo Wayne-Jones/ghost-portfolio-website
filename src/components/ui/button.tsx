@@ -5,17 +5,19 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const buttonVariants = cva(
-  'uppercase whitespace-nowrap rounded-md font-bold flex items-center transition-colors focus:outline-hidden focus:ring-2 focus:ring-dark-purple focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-dark-gray dark:focus:ring-light-purple disabled:pointer-events-none disabled:opacity-50 ',
+  'inline-flex items-center justify-center whitespace-nowrap rounded-md font-bold uppercase transition-colors duration-300 ease-studio focus-visible:focus-ring disabled:pointer-events-none disabled:opacity-50 motion-reduce:transition-none',
   {
     variants: {
       variant: {
         default:
-          'bg-dark-purple dark:bg-light-purple text-white dark:text-dark-gray hover:bg-dark-purple/90 dark:hover:bg-light-purple/90',
+          'bg-accent text-accent-foreground hover:bg-accent/90',
         outline:
-          'border border-dark-purple dark:border-light-purple text-dark-purple dark:text-light-purple bg-transparent hover:bg-dark-purple dark:hover:bg-light-purple hover:text-white dark:hover:text-dark-gray'
+          'border border-accent bg-transparent text-accent hover:bg-accent hover:text-accent-foreground',
+        imageGhost:
+          'gap-2 border border-current/50 bg-transparent px-5 py-2.5 text-foreground hover:border-transparent hover:bg-accent hover:text-accent-foreground'
       },
       size: {
-        default: 'p-4 text-base gap-2'
+        default: 'px-5 py-2.5 text-base gap-2'
       }
     },
     defaultVariants: {
