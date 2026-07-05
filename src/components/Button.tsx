@@ -1,12 +1,16 @@
 import { Button as UIButton } from '@/components/ui/button';
+import type { VariantProps } from 'class-variance-authority';
+import { buttonVariants } from '@/components/ui/button';
 import React, { JSX } from 'react';
+
+type ButtonVariant = NonNullable<VariantProps<typeof buttonVariants>['variant']>;
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
   icon?: JSX.Element;
   invert?: boolean;
   hideText?: boolean;
-  variant?: 'default' | 'outline';
+  variant?: ButtonVariant;
 }
 
 const Button = ({icon, invert = false, text, hideText = false, ...props}: ButtonProps) => {
