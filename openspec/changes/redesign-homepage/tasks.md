@@ -34,14 +34,14 @@
 
 ## 4. Layout and structural primitives
 
-- [ ] 4.1 Create `src/components/primitives/VisuallyHidden.tsx` — `sr-only` span wrapper
-- [ ] 4.2 Create `src/components/primitives/FocusRing.tsx` — shared `focus-visible` styling applying the `focus-ring` utility
-- [ ] 4.3 Create `src/components/layout/Container.tsx` — shared `max-w-7xl px-4 sm:px-6 lg:px-8` wrapper accepting `className` and `children`
-- [ ] 4.4 Create `src/components/layout/Section.tsx` — `<section aria-labelledby>` with vertical rhythm (accepts `id`, `ariaLabelledby`, `className`, `children`, `divider` flag)
-- [ ] 4.5 Create `src/components/layout/SectionDivider.tsx` — 1px hairline in `border-current/[0.08]`
-- [ ] 4.6 Create `src/components/layout/SkipLink.tsx` — first focusable element, visually hidden until focused, links to `#main`
-- [ ] 4.7 Co-locate `.stories.tsx` for each primitive and layout component with Default, Dark, Focused, and ReducedMotion stories where applicable
-- [ ] 4.8 Run `pnpm lint` and `pnpm run build-storybook`; confirm both exit 0 with no a11y violations
+- [x] 4.1 Create `src/components/primitives/VisuallyHidden.tsx` — `sr-only` span wrapper
+- [x] 4.2 Create `src/components/primitives/FocusRing.tsx` — shared `focus-visible` styling applying the `focus-ring` utility
+- [x] 4.3 Create `src/components/layout/Container.tsx` — shared `max-w-7xl px-4 sm:px-6 lg:px-8` wrapper accepting `className` and `children`
+- [x] 4.4 Create `src/components/layout/Section.tsx` — `<section aria-labelledby>` with vertical rhythm (accepts `id`, `ariaLabelledby`, `className`, `children`, `divider` flag)
+- [x] 4.5 Create `src/components/layout/SectionDivider.tsx` — 1px hairline in `border-current/[0.08]`
+- [x] 4.6 Create `src/components/layout/SkipLink.tsx` — first focusable element, visually hidden until focused, links to `#main`
+- [x] 4.7 Co-locate `.stories.tsx` for each primitive and layout component with Default, Dark, Focused, and ReducedMotion stories where applicable
+- [x] 4.8 Run `pnpm lint` and `pnpm run build-storybook`; confirm both exit 0 with no a11y violations
 - [ ] 4.9 Commit "Layout primitives: Container, Section, SectionDivider, SkipLink, VisuallyHidden, FocusRing + stories"
 
 ## 5. Typography primitives
