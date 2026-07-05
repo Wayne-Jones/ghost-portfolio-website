@@ -13,7 +13,7 @@ The current homepage renders a single `<Hero>` component with the rest of the pa
 - Establish a reusable component tree (Container, Section, DisplaySolid, DisplayGhost, Intro, Anchor, WorkTile, PhotoMosaicTile, WritingItem, etc.) instead of monolithic page components; every component composes smaller primitives
 - Style with Tailwind utilities only (no custom component CSS classes); `globals.css` holds only `@theme` tokens, `@custom-variant dark`, and registered `@utility` rules
 - Wire Next.js's built-in View Transitions API via `<ViewTransition>` from `next/view-transition` for page-wide crossfades, with shared-element transitions between portfolio tiles and `/portfolio/[slug]` hero images
-- Add Storybook stories (`.stories.tsx`) for every presentational component, leveraging the existing `@storybook/nextjs-vite` + `addon-a11y` + `@chromatic-com/storybook` setup
+
 - Refactor the Ghost CMS data helpers in `src/helper/util.tsx` into typed, reusable functions (`getLatestWork`, `getLatestPhotography`, `getLatestWriting`, `getPostBySlug`)
 - **BREAKING**: Remove dead code from the codebase: `src/components/Layout.tsx` (uses Pages Router APIs), `src/components/aside.tsx`, `src/components/about.tsx`, and `tailwind.config.ts` (Tailwind v4 reads tokens from `@theme` in CSS)
 - Surface the contact email via `AboutTeaser` and `SiteFooter` instead of the removed header pill
@@ -28,7 +28,7 @@ The current homepage renders a single `<Hero>` component with the rest of the pa
 - `hero`: The Bazil-style asymmetric hero layout — intro line, dual-weight display type, photo frame, centered CTA overlay, anchor copy
 - `view-transitions`: Next.js built-in View Transitions API integration for page-wide crossfade and shared-element portfolio-tile ↔ case-study transitions, gated by `prefers-reduced-motion`
 - `portfolio-case-study`: The `/portfolio` index (card grid reusing `WorkTile`) and `/portfolio/[slug]` case study page (hero with shared `view-transition-name`, meta line, Ghost HTML body, prev/next nav)
-- `component-library`: The reusable component tree (Container, Section, typography primitives, layout primitives, section components) with co-located Storybook stories for every presentational component
+- `component-library`: The reusable component tree (Container, Section, typography primitives, layout primitives, section components) with co-located documentation and test cases for every presentational component
 
 ### Modified Capabilities
 <!-- No existing specs to modify -->
@@ -38,7 +38,7 @@ The current homepage renders a single `<Hero>` component with the rest of the pa
 - **Code**: Delete `Layout.tsx`, `aside.tsx`, `about.tsx`, `tailwind.config.ts`; rebuild `Hero.tsx`, `Header.tsx`, `DarkModeTrigger.tsx` as composed primitives; refactor `src/helper/util.tsx`; rewrite `src/app/page.tsx`, `src/app/portfolio/page.tsx`, add `src/app/portfolio/[slug]/page.tsx`
 - **Dependencies**: Add `@tailwindcss/typography` for Ghost HTML body rendering; verify `tailwindcss-animate` v4 compatibility (keep if compatible, drop otherwise); update `components.json` to point shadcn at Base UI primitives
 - **Globals**: Extend `src/styles/globals.css` with semantic `@theme` tokens, `@custom-variant dark`, `@utility text-ghost`, `@utility ease-studio`, `@utility focus-ring`, and a `@media (prefers-reduced-motion: reduce)` guard for view transitions
-- **Compatibility**: View Transitions API gracefully degrades to instant navigation on older browsers (Firefox, older Safari); `pnpm lint` and `pnpm run build-storybook` must pass at the end of every phase
+- **Compatibility**: View Transitions API gracefully degrades to instant navigation on older browsers (Firefox, older Safari); `pnpm lint` must pass at the end of every phase
 - **Accessibility**: All new components must satisfy WCAG 2.2 AAA contrast (7:1 body / 4.5:1 large / 3:1 non-text), be keyboard navigable with visible focus rings, and gate motion via `motion-reduce:` utilities
 
 (End of proposal)

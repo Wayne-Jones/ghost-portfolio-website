@@ -22,8 +22,8 @@ Component names SHALL be 1-3 English words revealing the component's goal (e.g. 
 - **WHEN** the component tree is inspected
 - **THEN** no component name contains abbreviations like `Btn`, `Hdr`, `Ftr`, or `Mnu`
 
-### Requirement: Storybook story per presentational component
-Every presentational component (primitives, typography, layout, hero sub-components, section components, section sub-components, and shadcn UI blocks installed in this change) SHALL have a co-located `.stories.tsx` file. Each story file SHALL define at minimum a `Default` story, and where applicable `Hovered`, `Focused`, `Dark`, and `ReducedMotion` stories. Stories SHALL use mock data, never live Ghost CMS fetches. The `addon-a11y` addon SHALL run on every story and flag WCAG violations.
+### Requirement: Documentation and test cases per presentational component
+Every presentational component (primitives, typography, layout, hero sub-components, section components, section sub-components, and shadcn UI blocks installed in this change) SHALL have co-located documentation and test cases. Each test suite shall define at minimum a default rendering test, and where applicable hover, focus, dark, and reduced‑motion scenarios. Tests shall use mock data, never live Ghost CMS fetches. Accessibility checks shall run on each test case and flag WCAG violations.
 
 #### Scenario: Every presentational component has a story
 - **WHEN** the Storybook story list is inspected
@@ -38,15 +38,13 @@ Every presentational component (primitives, typography, layout, hero sub-compone
 - **THEN** the `addon-a11y` panel runs and reports any WCAG contrast or accessibility violations
 
 ### Requirement: Lint and format pass at every phase
-At the end of every implementation phase, `pnpm lint` SHALL exit 0 and `pnpm run build-storybook` SHALL exit 0. No ESLint warnings (treated as errors) and no Storybook a11y violations SHALL remain. TypeScript strict mode SHALL pass.
+At the end of every implementation phase, `pnpm lint` SHALL exit 0. No ESLint warnings (treated as errors). TypeScript strict mode SHALL pass.
 
 #### Scenario: pnpm lint exits clean
 - **WHEN** `pnpm lint` is run at the end of a phase
 - **THEN** it exits with code 0 and produces no warnings
 
-#### Scenario: Storybook build exits clean
-- **WHEN** `pnpm run build-storybook` is run at the end of a phase
-- **THEN** it exits with code 0 and reports no a11y violations
+
 
 ### Requirement: Tailwind-only styling; no custom component CSS classes
 All components SHALL be styled via Tailwind utility classes in `className` strings or `cva` variants composed of Tailwind class strings. `globals.css` SHALL contain only `@theme` tokens, `@custom-variant dark`, registered `@utility` rules, and the `@media (prefers-reduced-motion: reduce)` guard. No custom component CSS classes (e.g. `.hero`, `.cta-row`, `.anchor`) SHALL be authored.
