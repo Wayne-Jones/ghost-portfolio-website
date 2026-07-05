@@ -4,5 +4,4 @@ build
 dist
 .next
 .github
-.storybook
 .pnpm-lock.yaml

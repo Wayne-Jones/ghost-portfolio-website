@@ -1,6 +1,6 @@
 ## Context
 
-The GhostCMS-NextJS portfolio site currently renders a minimal placeholder homepage (`src/app/page.tsx` shows only `<Hero>` with the rest commented out), placeholder inner pages (`/portfolio`, `/photography`, `/blog` are bullet lists), and dead code (`src/components/Layout.tsx` uses Pages Router APIs incompatible with the App Router). The stack is Next.js 16 (Turbopack), Tailwind CSS v4 (tokens in `@theme`, not `tailwind.config.ts`), shadcn/ui on Radix with only `button` and `sheet` installed, and Ghost CMS as the content source via `@tryghost/content-api`. Storybook 10 is set up with `@storybook/nextjs-vite`, `addon-a11y`, `@chromatic/com/storybook`, and `@vueless/storybook-dark-mode`. The user wants a studio-craft portfolio aesthetic that avoids the "default shadcn / SaaS gradient" look, supports dark and light themes at WCAG 2.2 AAA contrast, and uses the View Transitions API for fluid navigation without adding framer-motion or splidejs.
+The GhostCMS-NextJS portfolio site currently renders a minimal placeholder homepage (`src/app/page.tsx` shows only `<Hero>` with the rest commented out), placeholder inner pages (`/portfolio`, `/photography`, `/blog` are bullet lists), and dead code (`src/components/Layout.tsx` uses Pages Router APIs incompatible with the App Router). The stack is Next.js 16 (Turbopack), Tailwind CSS v4 (tokens in `@theme`, not `tailwind.config.ts`), shadcn/ui on Radix with only `button` and `sheet` installed, and Ghost CMS as the content source via `@tryghost/content-api`. The user wants a studio-craft portfolio aesthetic that avoids the "default shadcn / SaaS gradient" look, supports dark and light themes at WCAG 2.2 AAA contrast, and uses the View Transitions API for fluid navigation without adding framer-motion or splidejs.
 
 ## Goals / Non-Goals
 
@@ -85,7 +85,7 @@ Refactor `src/helper/util.tsx` into typed functions:
 Homepage sections accept `PostSummary[]` props; Storybook stories pass mock arrays; `page.tsx` server components fetch via the helpers and pass data down.
 
 ### Decision 9: Storybook story per presentational component
-Every leaf and composition presentational component gets a co-located `.stories.tsx` file with `Default`, `Hovered`, `Focused`, `Dark`, and `ReducedMotion` stories where applicable. Stories use mock data, never live Ghost fetches. `addon-a11y` flags contrast violations; `@chromatic-com/storybook` snapshots every story on commit.
+Every leaf and composition presentational component gets co-located documentation and test cases where applicable. Documentation uses mock data, never live Ghost fetches. Accessibility checks flag WCAG violations.
 
 ## Risks / Trade-offs
 

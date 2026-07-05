@@ -1,9 +1,0 @@
-import{i as e}from"./preload-helper-BtWQueYT.js";import{nt as t}from"./iframe-DkY79Z9P.js";var n,r,i=e((()=>{n=t(),r=({children:e,className:t})=>(0,n.jsx)(`span`,{className:`sr-only${t?` ${t}`:``}`,children:e}),r.__docgenInfo={description:"Visually hidden element – still accessible to screen readers.\nUses Tailwind's `sr-only` utility.",methods:[],displayName:`VisuallyHidden`,props:{children:{required:!0,tsType:{name:`ReactNode`},description:``},className:{required:!1,tsType:{name:`string`},description:``}}}})),a,o,s,c,l,u;e((()=>{a=t(),i(),o={title:`Primitives/VisuallyHidden`,component:r,parameters:{backgrounds:{default:`light`}}},s=e=>(0,a.jsxs)(`div`,{className:`p-4`,children:[(0,a.jsx)(`p`,{children:`Before hidden text`}),(0,a.jsx)(r,{...e,children:`Screen reader only text`}),(0,a.jsx)(`p`,{children:`After hidden text`})]}),c=s.bind({}),c.args={},l=s.bind({}),l.parameters={backgrounds:{default:`dark`}},c.parameters={...c.parameters,docs:{...c.parameters?.docs,source:{originalSource:`(args: React.ComponentProps<typeof VisuallyHidden>) => <div className="p-4">\r
-    <p>Before hidden text</p>\r
-    <VisuallyHidden {...args}>Screen reader only text</VisuallyHidden>\r
-    <p>After hidden text</p>\r
-  </div>`,...c.parameters?.docs?.source}}},l.parameters={...l.parameters,docs:{...l.parameters?.docs,source:{originalSource:`(args: React.ComponentProps<typeof VisuallyHidden>) => <div className="p-4">\r
-    <p>Before hidden text</p>\r
-    <VisuallyHidden {...args}>Screen reader only text</VisuallyHidden>\r
-    <p>After hidden text</p>\r
-  </div>`,...l.parameters?.docs?.source}}},u=[`Default`,`Dark`]}))();export{l as Dark,c as Default,u as __namedExportsOrder,o as default};
