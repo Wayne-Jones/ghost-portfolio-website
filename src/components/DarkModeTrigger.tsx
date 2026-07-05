@@ -4,29 +4,22 @@ import Button from '@/components/Button';
 import { useTheme } from 'next-themes';
 import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
 import { VscBlank } from 'react-icons/vsc';
-import { useEffect, useState } from 'react';
 
 const DarkModeTrigger = () => {
-  const { systemTheme, theme, setTheme, resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const currentTheme = theme === 'system' ? resolvedTheme : theme;
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return <Button text='' icon={<VscBlank className='w-6 h-6' />} />;
-  }
-
-  const currentTheme = theme === 'system' ? (resolvedTheme ?? systemTheme) : theme;
-
-  const toggleTheme = (event: React.MouseEvent) => {
+  const toggleTheme = () => {
     if (currentTheme === 'dark') {
       setTheme('light');
     } else {
       setTheme('dark');
     }
   };
+
+  if (!currentTheme) {
+    return <Button text='' icon={<VscBlank className='w-6 h-6' />} />;
+  }
 
   return (
     <Button
