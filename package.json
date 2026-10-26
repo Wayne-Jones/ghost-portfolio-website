@@ -44,6 +44,6 @@
     "react-icons": "^5.7.0",
     "sharp": "^0.35.5",
     "tailwindcss": "^4.3.3",
-    "vite": "^8.3.4"
+    "vite": "^8.3.5"
   }
 }
