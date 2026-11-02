@@ -15,7 +15,7 @@
     "@radix-ui/react-slot": "^1.5.0",
     "@splidejs/splide": "^4.1.4",
     "@tryghost/content-api": "^1.12.13",
-    "@types/node": "^26.6.5",
+    "@types/node": "^26.6.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "class-variance-authority": "^0.7.1",
